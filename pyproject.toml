@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kempt"
+version = "0.1.0"
+description = "A developer toolkit for keeping git repositories healthy."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Aditya Mekala" }]
+keywords = ["git", "cli", "developer-tools", "changelog", "conventional-commits"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Version Control :: Git",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+kempt = "kempt.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/AdityaMekala14/kempt"
+
+[tool.setuptools.packages.find]
+include = ["kempt*"]
